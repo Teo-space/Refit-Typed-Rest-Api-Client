@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+
+		<PackageReference Include="NUlid" Version="*" />
+
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="*" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="*" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="*" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="*" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="*" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="*" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="*" />
+		
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Domain\Domain.csproj" />
+	</ItemGroup>
+</Project>
