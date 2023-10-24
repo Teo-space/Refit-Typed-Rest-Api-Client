@@ -2,6 +2,7 @@
 
 namespace Domain;
 
+
 /// <summary>
 /// Статья
 /// </summary>
