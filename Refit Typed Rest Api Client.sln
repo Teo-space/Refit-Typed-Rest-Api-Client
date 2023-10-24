@@ -3,22 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{BAABE875-0993-44A5-B8EE-D0E3C8057FFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{BAABE875-0993-44A5-B8EE-D0E3C8057FFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B6CA4D8F-6BB6-46E7-8845-6920F9F0694C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{B6CA4D8F-6BB6-46E7-8845-6920F9F0694C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{EBD23A1F-356B-4EC0-B39E-D6A5F9E4293A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{EBD23A1F-356B-4EC0-B39E-D6A5F9E4293A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{A48E3032-CDDE-4BF5-B5E1-800729151097}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{A48E3032-CDDE-4BF5-B5E1-800729151097}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCases", "UseCases\UseCases.csproj", "{929B9A5B-9F15-4AAA-ADE3-0E3911E1E6F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseCases", "UseCases\UseCases.csproj", "{929B9A5B-9F15-4AAA-ADE3-0E3911E1E6F3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{01E348E7-6486-446B-95A9-FE680BC3D52F}"
 	ProjectSection(SolutionItems) = preProject
 		Todo.txt = Todo.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiContracts", "ApiContracts\ApiContracts.csproj", "{D981BC6D-BE47-4337-8D55-76B177C788D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiContracts", "ApiContracts\ApiContracts.csproj", "{D981BC6D-BE47-4337-8D55-76B177C788D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Results", "Results\Results.csproj", "{3CE3A45F-F3F7-4DA5-96BB-A79AA3FB0AF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{D981BC6D-BE47-4337-8D55-76B177C788D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D981BC6D-BE47-4337-8D55-76B177C788D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D981BC6D-BE47-4337-8D55-76B177C788D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE3A45F-F3F7-4DA5-96BB-A79AA3FB0AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE3A45F-F3F7-4DA5-96BB-A79AA3FB0AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE3A45F-F3F7-4DA5-96BB-A79AA3FB0AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE3A45F-F3F7-4DA5-96BB-A79AA3FB0AF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
