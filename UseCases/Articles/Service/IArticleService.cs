@@ -13,28 +13,28 @@ public interface IArticleService
     /// </summary>
     /// <param name="command"></param>
     /// <returns></returns>
-    public Task<ArticleResponse> CreateBaseVersion(CommandArticleCreateBaseVersion command);
+    public Task<Result<ArticleResponse>> CreateBaseVersion(CommandArticleCreateBaseVersion command);
 
     /// <summary>
     /// Создать дочернюю версию
     /// </summary>
     /// <param name="command"></param>
     /// <returns></returns>
-    public Task<ArticleResponse> CreateVersion(CommandArticleCreateVersion command);
+    public Task<Result<ArticleResponse>> CreateVersion(CommandArticleCreateVersion command);
 
     /// <summary>
     /// Получить актуальную на данный момент версию
     /// </summary>
     /// <param name="query"></param>
     /// <returns></returns>
-    public Task<ArticleResponse> GetActualVersion(QueryArticleGetActualVersion query);
+    public Task<Result<ArticleResponse>> GetActualVersion(QueryArticleGetActualVersion query);
 
     /// <summary>
     /// Получить все версии статьи
     /// </summary>
     /// <param name="query"></param>
     /// <returns></returns>
-    public Task<IReadOnlyCollection<ArticleResponse>> GetVersions(QueryArticleGetVersions query);
+    public Task<Result<IReadOnlyCollection<ArticleResponse>>> GetVersions(QueryArticleGetVersions query);
 
 
 

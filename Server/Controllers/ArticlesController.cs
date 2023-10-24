@@ -20,7 +20,7 @@ public class ArticlesController(IArticleService articleService)
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost]
-    public async Task<ArticleResponse> CreateBaseVersion([FromBody] CommandArticleCreateBaseVersion request)
+    public async Task<Result<ArticleResponse>> CreateBaseVersion([FromBody] CommandArticleCreateBaseVersion request)
         => await articleService.CreateBaseVersion(request);
 
     /// <summary>
@@ -29,7 +29,7 @@ public class ArticlesController(IArticleService articleService)
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost("Version/")]
-    public async Task<ArticleResponse> CreateVersion([FromBody] CommandArticleCreateVersion request)
+    public async Task<Result<ArticleResponse>> CreateVersion([FromBody] CommandArticleCreateVersion request)
         => await articleService.CreateVersion(request);
 
     /// <summary>
@@ -46,7 +46,7 @@ public class ArticlesController(IArticleService articleService)
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpGet]
-    public async Task<ArticleResponse> GetActualVersion([FromQuery] QueryArticleGetActualVersion request)
+    public async Task<Result<ArticleResponse>> GetActualVersion([FromQuery] QueryArticleGetActualVersion request)
     => await articleService.GetActualVersion(request);
 
     /// <summary>
@@ -55,7 +55,7 @@ public class ArticlesController(IArticleService articleService)
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpGet("Version/")]
-    public async Task<IReadOnlyCollection<ArticleResponse>> GetVersions([FromQuery] QueryArticleGetVersions request)
+    public async Task<Result<IReadOnlyCollection<ArticleResponse>>> GetVersions([FromQuery] QueryArticleGetVersions request)
         => await articleService.GetVersions(request);
 
 

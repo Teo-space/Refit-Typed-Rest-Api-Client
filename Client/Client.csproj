@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ApiContracts\ApiContracts.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Results\Results.csproj" />
     <ProjectReference Include="..\UseCases\UseCases.csproj" />
   </ItemGroup>
 

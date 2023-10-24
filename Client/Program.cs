@@ -13,17 +13,17 @@ Console.WriteLine(defaultEndpoint);
 
 
 var CreateBaseVersionResult = await articlesApi.CreateBaseVersion(new CommandArticleCreateBaseVersion("Title", "Description", "Text"));
-Console.WriteLine(CreateBaseVersionResult);
+Console.WriteLine($"CreateBaseVersionResult : {CreateBaseVersionResult.Success}");
 
 
 var CreateVersionResult = await articlesApi.CreateVersion(new CommandArticleCreateVersion("Title", "Description", "Text"));
-Console.WriteLine(CreateVersionResult);
+Console.WriteLine($"CreateVersionResult : {CreateVersionResult.Success}");
 
 var ActualVersion = await articlesApi.GetActualVersion(new QueryArticleGetActualVersion("Title"));
-Console.WriteLine(ActualVersion);
+Console.WriteLine($"ActualVersion : {ActualVersion.Success}");
 
-var versions = await articlesApi.GetVersions(new QueryArticleGetVersions("Title"));
-Console.WriteLine($"{versions},     Count: {versions.Count}");
+var Versions = await articlesApi.GetVersions(new QueryArticleGetVersions("Title"));
+Console.WriteLine($"{Versions.Success},     Count: {(Versions.Success ? Versions.Value.Count : 0)}");
 
 
 
@@ -39,7 +39,7 @@ public interface IArticlesApi
     /// <param name="request"></param>
     /// <returns></returns>
     [Get("/")]
-    Task<ArticleResponse> GetActualVersion(QueryArticleGetActualVersion request);
+    Task<Result<ArticleResponse>> GetActualVersion(QueryArticleGetActualVersion request);
 
     /// <summary>
     /// Получить историю версий
@@ -47,7 +47,7 @@ public interface IArticlesApi
     /// <param name="request"></param>
     /// <returns></returns>
     [Get("/Version")]//
-    Task<IReadOnlyCollection<ArticleResponse>> GetVersions(QueryArticleGetVersions request);
+    Task<Result<IReadOnlyCollection<ArticleResponse>>> GetVersions(QueryArticleGetVersions request);
 
     /// <summary>
     /// Создать базовую версию
@@ -55,7 +55,7 @@ public interface IArticlesApi
     /// <param name="request"></param>
     /// <returns></returns>
     [Post("/")]
-    Task<ArticleResponse> CreateBaseVersion(CommandArticleCreateBaseVersion request);
+    Task<Result<ArticleResponse>> CreateBaseVersion(CommandArticleCreateBaseVersion request);
 
     /// <summary>
     /// Создать дочернюю версию
@@ -63,7 +63,7 @@ public interface IArticlesApi
     /// <param name="request"></param>
     /// <returns></returns>
     [Post("/Version")]
-    Task<ArticleResponse> CreateVersion(CommandArticleCreateVersion request);
+    Task<Result<ArticleResponse>> CreateVersion(CommandArticleCreateVersion request);
 
 
 
