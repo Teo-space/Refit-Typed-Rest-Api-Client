@@ -22,8 +22,12 @@ public class HttpResponseExceptionFilter : IActionFilter, IOrderedFilter
     {
         if (context?.Exception is not null && context.Exception is Exception exception)
         {
-            logger.LogError($"[{context?.HttpContext?.Request?.Method}] {context?.HttpContext?.Request?.Path}  ExceptionType: {exception.GetType().Name}, Message: {exception.Message}. Exception: {{@exception}}", exception);
-            logger.LogError(exception.ToString());
+            logger.LogError(
+@$"[{context?.HttpContext?.Request?.Method}] {context?.HttpContext?.Request?.Path}  
+ExceptionType: {exception.GetType().Name}, 
+Message: {exception.Message}. 
+Exception: {{@exception}}", exception);
+
 
             context.Result = new ObjectResult(Result.Exception<string>(exception.GetType().Name, exception.Message))
             {
