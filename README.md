@@ -1,5 +1,5 @@
 # Refit Typed Rest Api Client
-```
+```cs
 var articlesApi = RestService.For<IArticlesApi>("http://localhost:5266/api/Articles/");
 
 var CreateBaseVersionResult = await articlesApi.CreateBaseVersion(new CommandArticleCreateBaseVersion("Title", "Description", "Text"));
